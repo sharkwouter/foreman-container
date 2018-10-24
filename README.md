@@ -9,4 +9,4 @@ The container can be started with:
 ```
 docker run -d -p 3000:3000 sharkwouter/foreman
 ```
-After starting, Foreman can be found at: [http://127.0.0.1:3000/]
+After starting, Foreman can be found at: http://127.0.0.1:3000/
