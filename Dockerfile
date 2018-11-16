@@ -1,6 +1,6 @@
 FROM debian:stretch
 ENV FOREMAN_VERSION 1.19-stable
-ENV RAILS_ENV development
+ENV RAILS_ENV production
 
 #install dependencies
 RUN apt-get update &&\
@@ -36,4 +36,4 @@ RUN sqlite3 /root/foreman/db/${RAILS_ENV}.sqlite3 'UPDATE users SET password_has
 
 WORKDIR /root/foreman
 EXPOSE 3000/tcp
-CMD ./bin/rails server
+CMD ./bin/rails server -b 0.0.0.0
